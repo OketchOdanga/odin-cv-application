@@ -28,22 +28,36 @@ export default function Education() {
     }
 
     return (
-        <>
-        <form>
-            <label htmlFor="school">School</label>
-            <input type="text" name="school" id="school" value={school} onChange={handleSchool}/>
-            <label htmlFor="course">Course</label>
-            <input type="text" name="course" id="course" value={course} onChange={handleCourse} />
-            <label htmlFor="start">Start</label>
-            <input type="date" name="start" id="start" value={start} onChange={handleStart} />
-            <label htmlFor="finish">Finish</label>
-            <input type="date" name="finish" id="finish" value={start} onChange={handleFinish} />
-            <button type="submit" onClick={handleSubmit} >Submit</button>
-            <button type="reset" onClick={handleReset}>Reset</button>
+        <section className="hero2">
+        <form className="form-education" id="formEducation" onSubmit={handleSubmit}>
+            <div className="school">
+                <label htmlFor="school">School</label>
+                <input type="text" name="school" id="school" value={school} onChange={handleSchool}/>
+            </div>
+
+            <div className="course">
+                <label htmlFor="course">Course</label>
+                <input type="text" name="course" id="course" value={course} onChange={handleCourse} />
+            </div>
+
+            <div className="start">
+                <label htmlFor="start">Start</label>
+                <input type="date" name="start" id="start" value={start} onChange={handleStart} />
+            </div>
+
+            <div className="finish">
+                <label htmlFor="finish">Finish</label>
+                <input type="date" name="finish" id="finish" value={start} onChange={handleFinish} />
+            </div>
+
+            <div className="buttons">
+                <button type="submit">Add</button>
+                <button type="reset" onClick={handleReset}>Reset</button>
+            </div>
         </form>
         <p>{school}</p>
         <p>{course}</p>
         <p>{start} to {finish}</p>
-        </>
+        </section>
     )
 }
