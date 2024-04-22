@@ -1,11 +1,17 @@
 /* import { useState } from 'react' */
-import './App.css'
-import { Car } from './Example1'
+import Education from './components/Education'
+import PersonalInfo from './components/PersonalInfo'
+import WorkExperience from './components/WorkExperience'
 function App() {
  
  
   return (
-    <Car/>
+    <>
+    <PersonalInfo/>
+    <Education/>
+    <WorkExperience/>
+    </>
+
   )
 }
 
