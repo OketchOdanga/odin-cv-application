@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hero2 {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 2rem ;
+}
+
+.form-education {
+    justify-self: center;
+    background-color: #f4dfc8;
+    color: black;
+    padding: 2rem;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.form-education > div {
+    display: grid;
+}
+
+.form-education input {
+    background-color: #faf6f0;
+    border: none;
+    outline: none;
+    height: 2rem;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    color: black;
+}
+
+.form-education input:active{
+    background-color: #faf6f0;
+}
+
+.education {
+    background-color: #faf6f0;
+    color: black;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
