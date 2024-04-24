@@ -1,22 +1,18 @@
 /* this section will include educational experience (school name title of study and date of study) */
 
 import { useState } from "react";
-import './styles/Education.css'
-
 export default function Education() {
-    const[education,setEducation] = useState([{}]);
+    const[education,setEducation] = useState({});
 
     function handleChange(e){
         const {name, value} = e.target;
         setEducation({...education, [name]: value})
     }
     
-    function handleReset() {
-        setEducation('')
-    }
 
     function handleSubmit(e){
         e.preventDefault();
+        setEducation('')
     }
 
     return (
@@ -44,7 +40,6 @@ export default function Education() {
 
             <div className="buttons">
                 <button type="submit">Add</button>
-                <button type="reset" onClick={handleReset}>Reset</button>
             </div>
         </form>
 

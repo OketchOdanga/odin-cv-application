@@ -1,5 +1,4 @@
 /* This section contains general information like name, email and phone nmber */
-import './styles/PersonalInfo.css'
 import {useState} from "react"
 export default function PersonalInfo() {
     const [firstName, setFirstName] = useState('');
@@ -56,8 +55,8 @@ export default function PersonalInfo() {
         </form>
         <div className='personal-info'>
         <p>{firstName} {lastName}</p>
-        <p>{email}</p>
-        <p>{phoneNumber}</p>
+        <p> <img src="src/assets/phone.svg" alt=""/> {email}</p>
+        <p> <img src="src/assets/email-outline.svg" alt=""/> {phoneNumber}</p>
         </div>
 
         </section>

@@ -1,8 +1,6 @@
 /* this section adds practical/work experience (company name , position title, main responsibilities of your jobs date from and until when you worked for that company) */
 
 import { useState } from "react"
-import './styles/WorkExperience.css'
-
 export default function WorkExperience() {
     const [work, setWork] = useState({company:'audi', position:'manager', responsibilities:['sleep'],start: '2004-4-6', finish: '2012-5-7'})
     const [newindex,setNewIndex] = useState(null);
