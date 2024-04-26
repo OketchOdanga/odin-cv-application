@@ -1,17 +1,15 @@
 /* import { useState } from 'react' */
-import Education from './components/Education'
-import PersonalInfo from './components/PersonalInfo'
-import WorkExperience from './components/WorkExperience'
-function App() {
- 
- 
+import './styles/stylesheet.css'
+import { CurricullumVitae } from './components/Resume'
+
+
+
+function App() { 
   return (
     <>
-    <PersonalInfo/>
-    <Education/>
-    <WorkExperience/>
+    <h1>CV-MAKER</h1>
+    <CurricullumVitae/>
     </>
-
   )
 }
 
