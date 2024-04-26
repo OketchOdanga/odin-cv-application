@@ -1,64 +1,32 @@
 /* This section contains general information like name, email and phone nmber */
-import {useState} from "react"
-export default function PersonalInfo() {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phoneNumber, setphoneNumber] = useState('');
-    /* user name */
-    function handleFirstNameChange(e) {
-        setFirstName(e.target.value);
-    }
-    function handleLastNameChange(e) {
-        setLastName(e.target.value);
-    }
-    /* email */
-    function handleEmail(e) {
-        setEmail(e.target.value);
-    }
-    /* phonenumber */
-    function handlePhoneNumber(e) {
-        setphoneNumber(e.target.value);
-    }
-    function handleReset() {
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setphoneNumber('');
-    }
-
-    return (
-        <section className="hero1">
-        <form className="form-personal-info" id="formPersonalInfo" onSubmit={e => e.preventDefault()} >
-            <div className="firstName">
-                <label htmlFor="firstName">First Name</label>
-                <input placeholder='First Name' value={firstName} onChange={handleFirstNameChange} id="firstName" name="firstName"  />
-            </div>
-
-            <div className="lastName">
-                <label htmlFor="lastName">Last Name</label>
-                <input placeholder='Last Name' value={lastName} onChange={handleLastNameChange} id="lastName" name="lastName" />
-            </div>
-
-            <div className="email">
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="hey@email.com" value={email} onChange={handleEmail}/>
-            </div>
-
-            <div className="phoneNumber">
-                <label htmlFor="phoneNumber">Phone number</label>
-                <input type="text" name="phoneNumber" id="phoneNumber" value={phoneNumber} onChange={handlePhoneNumber}/>
-            </div>
-            <div className="buttons">
-                <button onClick={handleReset}>Reset</button>
-            </div>
-        </form>
-        <div className='personal-info'>
-        <p>{firstName} {lastName}</p>
-        <p> <img src="src/assets/phone.svg" alt=""/> {email}</p>
-        <p> <img src="src/assets/email-outline.svg" alt=""/> {phoneNumber}</p>
+export const AddPersonalInfo = ({name,email,number,onChange,onAdd}) => (
+    <form className="form-personal-info">
+        <div>
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" value={name} onChange={onChange} required/>
         </div>
+        <div>
+            <label htmlFor="email">email</label>
+            <input type="email" name="email" id="email" value={email} onChange={onChange}/>
+        </div>
+        <div>
+            <label htmlFor="number">phone number</label>
+            <input type="tel" name="number" id="number" value={number} onChange={onChange}/>
+        </div> 
+        <button type="button" onClick ={onAdd} >Add</button> 
+    </form>
+)
 
-        </section>
-    )
-}
+export const PersonalInfoList = ({list,onEdit,onDelete}) => (
+    <ul className="personalInfo">
+        {list.map((item)=>(
+            <li key={item.id}>
+                <p>{item.name}</p>
+                <p> <img src="src/assets/phone.svg" alt="phone icon"/> {item.number}</p>
+                <p> <img src="src/assets/email-outline.svg" alt="phone icon"/> {item.email}</p>
+                <button type="button" onClick={onEdit} >Edit</button>
+                <button type="button" onClick={onDelete}>Delete</button>
+            </li>
+        ))}
+    </ul>
+)
