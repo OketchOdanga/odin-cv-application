@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* WHOLE CV */
+.user-input{
+    background-color: #f4dfc8;
+    color: black;
+}
+
+.resume {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 95vw;
+    gap: 1rem;
+}
+
+.cv {
+    background-color: white;
+    color: black;
+}
+img {
+    height: 1rem;
+    width: 2rem;
+}
+
+h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+/* CV SECTIONS */
+/* PERSONAL INFO */
+
+.personal-Info ul li {
+    list-style: none;
+    padding-left: 2rem ;
+}
+
+.personalInfo {
+    border-bottom: 1.5px solid gray;
+}
+
+
+.form-personal-info ,
+.form-education ,
+.form-work{
+    justify-self: center;
+    padding: 2rem;
+    display: grid;
+    gap: 10px;
+}
+
+.form-personal-info > div ,
+.form-education > div,
+.form-work > div {
+    display: grid;
+}
+
+.form-personal-info input,
+.form-education input ,
+.form-work input,
+.form-work textarea{
+    width: 100%;
+    background-color: #faf6f0;
+    border: none;
+    outline: none;
+    height: 2rem;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    color: black;
+}
+
+.form-personal-info input:active,
+.form-education input:active,
+.form-work input:active{
+    background-color: #faf6f0;
+}
+
+/* education */
+
+._education ul li {
+    display: grid;
+}
+
+.wrapper-education {
+    list-style: none;
+    padding: 2rem;
+    color: black;
+}
+/* WORK */
+
+.list_company,
+.list_school {
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
+}
+
+.experience ul li{
+    display: grid;
+    list-style: none;
+    padding-left: 2rem;
+}
+
+
+@media screen and (max-width: 500px) {
+    .resume{
+        display: unset;
+        display: flex;
+        flex-direction: column;
+    }
+  
+  
+}
+
+
+
