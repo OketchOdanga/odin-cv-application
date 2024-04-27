@@ -7,7 +7,8 @@ import { Form } from './Form'
 
 export const Main = () => {
   const [ userData, setUserData ] = useState({
-    name : '',
+    first_name : '',
+    last_name : '',
     email : '',
     phone : '',
     education : [],
@@ -15,7 +16,7 @@ export const Main = () => {
   })
 
   return (
-    <div className='flex flex-col laptop:flex-row gap-4 items-center justify-evenly m-auto p-4 text-left'>
+    <div className='main'>
       <Form user={userData} updateUser={setUserData}/>
       <Preview user={userData} updateUser={setUserData}/>
     </div>
