@@ -21,10 +21,12 @@ export const Preview = ({ user }) => {
         <article>
           <h5>{first_name}</h5> <h5>{last_name}</h5>
         </article>
-        <p>{email} {phone}</p>
+        <p>Email : {email}</p>
+        <p>Tel : {phone}</p>
       </section>
 
       <section className="education">
+        <span> Education </span>
         {
           education.map((edu) => {
             const { school_name, competency, date_from, date_to } = edu
@@ -40,6 +42,7 @@ export const Preview = ({ user }) => {
       </section>
 
       <section className="work_experience">
+        <span>Work Experience </span>
         {
           workExperience.map((work) => {
             const { company_name, position, date_from, date_to } = work
